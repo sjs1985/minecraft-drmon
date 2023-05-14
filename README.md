@@ -1,5 +1,6 @@
 
-![](examples/2.jpg)
+![](examples/safe.jpg)
+![](examples/risky.jpg)
 > *status*: currently stable, writing documentation
 
 
@@ -10,6 +11,9 @@ monitor and failsafe automation for your draconic reactor
 this is a computercraft LUA script that monitors everything about a draconic reactor, with a couple features to help keep it from exploding
 NB: This is for Minecraft 1.7.10. You will need to edit references within the code for any version higher to reflect any changes made to Draconic Evolution past its 1.7.10 release.
 
+This has been edited to have 2 automatically increasing versions (With an on/off button added to the UI)
+1. A safe one (increments in 15000 rf/t jumps when temp is <6000 and satureation is >25%)
+2. A risky one (outputs max rf/t possible while maintaining a temp of 7900)
 
 ### tutorial
 you can find a very well made youtube tutorial on how to set this up [here](https://www.youtube.com/watch?v=8rBhQP1xqEU) , thank you [The MindCrafters](https://www.youtube.com/channel/UCf2wEy4_BbYpAQcgvN26OaQ)
@@ -46,8 +50,14 @@ you can find a very well made youtube tutorial on how to set this up [here](http
 * run network cable to all 3 modems
 * install this code via running the install script using these commands :
 
+Safe version:
 ```
-> pastebin get Ls1Wg3QQ install
+> pastebin get LWcETyHk install
+> install
+```
+Risky version:
+```
+> pastebin get fQwKK0c7 install
 > install
 ```
 * modify `startup` if you wish to configure/alter any variables mentioned in the feature list, you'll find them at the top of the file
