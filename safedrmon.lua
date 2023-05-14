@@ -42,6 +42,17 @@ local emergencyTemp = false
 
 monitor = f.periphSearch("monitor")
 inputfluxgate = f.periphSearch("flux_gate")
+
+if peripheral.getType("right") == "flux_gate" then
+    fluxgateSide = "right"
+elseif peripheral.getType("left") == "flux_gate" then
+	fluxgateSide = "left"
+elseif peripheral.getType("top") == "flux_gate" then
+	fluxgateSide = "top"
+elseif peripheral.getType("bottom") == "flux_gate" then
+	fluxgateSide = "bottom"
+end
+
 fluxgate = peripheral.wrap(fluxgateSide)
 reactor = peripheral.wrap(reactorSide)
 
